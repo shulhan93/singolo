@@ -27,6 +27,7 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
+    height: 100%;
 
 }
 
@@ -87,4 +88,47 @@ body {
 
 .menu__link:hover {
     color: #f06c64;
+}
+
+/* ===== slider ===== */
+.slider {
+    padding-top: 52px;
+    min-height: 600px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+
+.slider__item {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider__wrapper {
+    position: relative;
+}
+
+.slider__item_slide1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    height: 30px;
+    width: 18px;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+}
+
+.slider__btn_prev {
+    left: 0;
+    background: url('assets/img/btn-prev.png') center center no-repeat;
+}
+
+.slider__btn_next {
+    right: 0;
+    background: url('assets/img/btn-next.png') center center no-repeat;
 }
