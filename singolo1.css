@@ -49,8 +49,14 @@ body {
 }
 
 .header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -60,6 +66,8 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.7px;
+    -webkit-transform: scaleY(1.1);
+    -ms-transform: scaleY(1.1);
     transform: scaleY(1.1);
 }
 
@@ -68,12 +76,18 @@ body {
 }
 
 .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .menu__item {
     padding-top: 4px;
+    -webkit-transform: scaleY(1.1);
+    -ms-transform: scaleY(1.1);
     transform: scaleY(1.1);
 
 }
@@ -102,6 +116,8 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
     letter-spacing: -0.3px;
 }
@@ -128,8 +144,14 @@ body {
 }
 
 .slider__item_slide1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -147,6 +169,8 @@ body {
     top: 50%;
     height: 30px;
     width: 18px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
@@ -181,8 +205,13 @@ body {
 
 .services__wrapper {
     margin-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -190,7 +219,7 @@ body {
     position: relative;
     margin-bottom: 20px;
     padding-left: 80px;
-    flex-basis: 300px;
+    max-width: 300px;
 }
 
 .services__img {
