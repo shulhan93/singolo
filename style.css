@@ -125,6 +125,10 @@ body {
     letter-spacing: -0.3px;
 }
 
+.menu__link.active {
+    color: #f06c64;
+}
+
 .menu__link:hover {
     color: #f06c64;
 }
