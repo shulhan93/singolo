@@ -9,38 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header id="header" class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <h1 class="logo">
-                    singolo<span class="logo__stark">*</span>
-                </h1>
-                <nav class="navigation">
-                    <ul id="menu" class="menu">
-                        <li class="menu__item">
-                            <a class="menu__link active" href="#header">home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#services">services</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#portfolio">portfolio</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#about">about</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#contact">contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div><!-- ./container -->
+<body ">
+    <header id=" header" class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <h1 class="logo">
+                singolo<span class="logo__stark">*</span>
+            </h1>
+            <nav class="navigation">
+                <ul id="menu" class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link active" href="#home">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#services">services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#portfolio">portfolio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#about">about</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contact">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- ./container -->
     </header>
 
     <main>
-        <div class="slider">
+        <section id="home" class="slider">
             <div class="container">
                 <div id="slider" class="slider__wrapper">
                     <div class="slider__item active slide1">
@@ -54,17 +54,17 @@
                         </div>
                     </div>
 
-                     <div class="slider__item slide2">
+                    <div class="slider__item slide2">
                         <div class="slider2__img">
                             <img src="assets/img/slider2.png" alt="">
                         </div>
-                    </div> 
+                    </div>
 
                     <button id="btn_prev" style="display: none;" class="slider__btn slider__btn_prev"></button>
                     <button id="btn_next" class="slider__btn slider__btn_next"></button>
                 </div>
             </div><!-- ./container -->
-        </div><!-- ./slider -->
+        </section><!-- ./slider -->
 
         <section id="services" class="services">
             <div class="container">
@@ -349,13 +349,13 @@
                 </p>
                 <div class="message__wrapper">
                     <form id="form" class="form" method="POST">
-                        <input id="fname" type="text"  minlength="2" placeholder="Name (Required)" required>
-                        <input id="femail" type="email" minlength="6"  placeholder="Email (Required)" required>
-                        <input id="fsubject" type="text"  placeholder="Subject">
-                        <textarea id="fdescr"  placeholder="Describe your project in detail..."></textarea>
+                        <input id="fname" type="text" minlength="2" placeholder="Name (Required)" required>
+                        <input id="femail" type="email" minlength="6" placeholder="Email (Required)" required>
+                        <input id="fsubject" type="text" placeholder="Subject">
+                        <textarea id="fdescr" placeholder="Describe your project in detail..."></textarea>
                         <input id="fsubmit" type="submit" class="btn" value="send">
                     </form>
-             
+
 
                     <div class="message__contacts">
                         <h3 class="message__contacts_title">
@@ -427,7 +427,7 @@
             </div>
         </div>
     </footer>
-    <div id="dialog-block" class="hidden" >
+    <div id="dialog-block" class="hidden">
         <div id="message">
             <p id="result"></p>
             <div class="dialog__wrapper">

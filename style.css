@@ -18,10 +18,19 @@ ul {
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+main {
+    margin-top: 95px;
 }
 
 body.overflow-hidden {
@@ -49,10 +58,14 @@ body.overflow-hidden {
 
 /* ===== header ===== */
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 30px 0;
     height: 95px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
+    z-index: 5;
 }
 
 .header__wrapper {
@@ -141,6 +154,11 @@ body.overflow-hidden {
 
 /* ===== slider ===== */
 .slider {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     position: relative;
     min-height: 600px;
     background-color: #f06c64;
@@ -273,6 +291,11 @@ body.overflow-hidden {
 
 /* ===== services ===== */
 .services {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     padding-top: 65px;
     min-height: 500px;
     background-color: #f2f2f2;
@@ -334,6 +357,11 @@ body.overflow-hidden {
 
 /* ===== portfolio ===== */
 .portfolio {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     padding-top: 65px;
     padding-bottom: 67px;
     background-color: #2d303a;
@@ -403,23 +431,30 @@ body.overflow-hidden {
 .tabs__img {
     max-width: 220px;
     overflow: hidden;
+    outline: 5px solid transparent;
+    outline-offset: -5px;
+    transition: all 0.4s;
+    cursor: pointer;
 }
-
 
 .tabs__img img {
     display: block;
-    transition: all 0.4s;
 }
 
-.tabs__img img:hover {
-    transform: scale(1.1);
-
+.tabs__img.active {
+    outline: 5px solid #F06C64;
+    outline-offset: -5px;
 }
 
 /* ===== ./portfolio =====*/
 
 /* ===== about ====== */
 .about {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     padding-top: 65px;
     padding-bottom: 67px;
     background-color: #f2f2f2;
@@ -520,6 +555,11 @@ body.overflow-hidden {
 
 /* ===== message ===== */
 .message {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     position: relative;
     padding-top: 65px;
     padding-bottom: 15px;

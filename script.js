@@ -8,21 +8,57 @@ const BTN_PHONE2 = document.getElementById('b-phone2')
 const FORM = document.getElementById('form')
 const SUBMIT = document.getElementById('fsubmit')
 const CLOSE_BTN = document.getElementById('close-btn')
+const CONTENT = document.querySelector('.tabs__content')
 
 
-/* menu */
+
+/* ===== menu ===== */
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('.menu__link').forEach(el => el.classList.remove('active'))
     event.target.classList.add('active')
 })
 
-/* tabs */
+document.addEventListener('scroll', function () {
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('body,section')
+    const links = document.querySelectorAll('.menu a')
+
+    sections.forEach((el) => {
+        if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') == a.getAttribute('href').substring(1)) {
+                    a.classList.add('active')
+                }
+            })
+        }
+    })
+})
+
+/* ===== tabs ===== */
 TABS.addEventListener('click', (event) => {
+    let tabsitem = document.querySelectorAll('.tabs__col')
+
+    if (!event.target.classList.contains('active')) {
+        let arr = [...tabsitem].sort(() => Math.random() - 0.5);
+        arr.forEach(el => {
+            CONTENT.appendChild(el)
+        })
+    }
     TABS.querySelectorAll('.tabs__title').forEach(el => el.classList.remove('active'))
     event.target.classList.add('active')
 })
 
-/* slider */
+/* ===== img=====  */
+CONTENT.addEventListener('click', (event) => {
+    document.querySelectorAll('.tabs__img').forEach(el => {
+        el.classList.remove('active')
+    })
+    event.target.closest('.tabs__img').classList.add('active')
+    console.log(event.target.closest('.tabs__img'))
+})
+
+/* ===== slider ===== */
 BTN_NEXT.addEventListener('click', (event) => {
     BTN_PREV.style.display = "block"
     let slides = SLIDER.querySelectorAll('.slider__item')
@@ -62,7 +98,7 @@ BTN_PREV.addEventListener('click', () => {
     slides[i - 1].classList.add('active')
 })
 
-/* phone button */
+/* ===== phone button ===== */
 BTN_PHONE1.addEventListener('click', () => {
     document.querySelectorAll('.slide1__img')[0].classList.toggle('active')
 })
