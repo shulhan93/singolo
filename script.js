@@ -13,10 +13,7 @@ const CONTENT = document.querySelector('.tabs__content')
 
 
 /* ===== menu ===== */
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('.menu__link').forEach(el => el.classList.remove('active'))
-    event.target.classList.add('active')
-})
+
 
 document.addEventListener('scroll', function () {
     const curPos = window.scrollY;
@@ -141,3 +138,15 @@ CLOSE_BTN.addEventListener('click', () => {
     document.getElementById('dialog-block').classList.add('hidden')
 
 })
+
+/* hamburger */
+let hamburger = document.querySelector('.hamburger')
+let overlay = document.querySelector('.navigation__overlay')
+
+hamburger.addEventListener('click', (event) => {
+    hamburger.classList.toggle('active')
+    document.querySelector('.navigation').classList.toggle('active')
+    overlay.classList.toggle('active')
+  
+})
+

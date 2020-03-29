@@ -100,6 +100,24 @@ body.overflow-hidden {
     color: #f06c64;
 }
 
+.navigation__overlay {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #2D303A;
+    opacity: 1;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.navigation__overlay.active {
+    display: block;
+    opacity: 0.6
+}
+
 .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,10 +177,12 @@ body.overflow-hidden {
 .hamburger {
     display: none;
     position: relative;
-    left: -104px;
+    left: -33%;
     width: 25px;
     height: 20px;
     cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s;
 }
 
 .hamburger__line,
@@ -444,6 +464,10 @@ body.overflow-hidden {
     color: #767e9e;
     font-weight: 400;
     transition: all 0.3s;
+}
+
+.tabs__title:last-child {
+    margin: 0;
 }
 
 .tabs__title.active {
@@ -1064,6 +1088,7 @@ body.overflow-hidden {
 
 
 @media (max-width: 767px) {
+
     .container {
         max-width: 375px;
         padding: 0 30px;
@@ -1090,7 +1115,48 @@ body.overflow-hidden {
     }
 
     .navigation {
-        display: none;
+     position: fixed;
+     top: 0;
+     left: -100%;
+     height: 100%;
+     width: 78%;
+     background-color: #2D303A;
+     box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+     transition: all 0.4s;
+     z-index: 2;
+    }
+
+    .navigation.active {
+        left: 0;
+    }
+
+    .hamburger.active {
+        transform: rotate(90deg);
+    }
+
+    .menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+
+    .menu .menu__item {
+        margin-right: 0;
+        margin-bottom: 25px;
+
+    }
+
+    .menu .menu__item::after {
+       display: none;
     }
 
     .logo {
@@ -1109,12 +1175,16 @@ body.overflow-hidden {
     /* ===== ./header ===== */
 
     /* ===== slider ===== */
+   
+
     .slider__wrapper {
         min-height: 214px;
+        margin: 0 -20px;
     }
 
     .slide1 {
         padding-left: 0;
+        justify-content: center;
     }
 
     .slide1__img:nth-child(1) {
@@ -1171,6 +1241,12 @@ body.overflow-hidden {
     .tabs__content {
         height: 555px;
     }
+
+    .tabs__list {
+        flex-wrap: wrap;
+    }
+
+    .tabs__title:last-child {}
 
     .tabs__col {
         width: 50%;
@@ -1261,6 +1337,12 @@ body.overflow-hidden {
 
     .footer .social .social__link_left:first-child {
         margin-left: 0;
+    }
+
+    @media (max-width: 374px) {
+        body {
+            width: 375px;
+        }
     }
 
 
